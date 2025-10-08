@@ -1,0 +1,5 @@
+== GLOGUS
+*Modèles de documents requis par la pratique du génie logiciel*
+
+Proposés par les membres du groupe Metis +
+Département d’informatique, Faculté des sciences, Université de Sherbrooke.
