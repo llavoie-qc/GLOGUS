@@ -1,0 +1,763 @@
+// Signature du document
+:organisation: Metis
+:copyright: Μῆτις
+:entrepot: CoFELI
+:depot: GLOGUS
+:!branche:
+:glogus_doc:
+:glogus_client: <<Client>>
+:glogus_commanditaire: <<Commanditaire>>
+:glogus_fournisseur: <<Fournisseur>>
+:glogus_produit: <<Produit>>
+:glogus_projet: <<Projet>>
+:!glogus_phase:
+:glogus_mandat: <<01>>
+:sigle: {organisation}:{glogus_produit}_{glogus_projet}
+ifdef::glogus_phase[:sigle: {sigle}_{glogus_phase}]
+:sigle: {sigle}_MPS
+ifdef::glogus_mandat[:sigle: {sigle}-{glogus_mandat}]
+:titre: <<Titre du Projet>>
+:sous_titre: <<Titre du Mandat>>
+:keywords: mandat de prestation de service
+:revnumber: 150a
+:revdate: 2025-10-10
+:version-label: version applicable
+:author: Luc LAVOIE
+:email: luc.lavoie@usherbrooke.ca
+
+// Contexte de support du document
+include::../../../rep_CoLOED_AsciiDoc.adoc[]
+:rep_Scriptorum: {rep_racine}/CoFELI/Scriptorum
+
+ifndef::format_effectif[:format_effectif: RAPPORT]
+include::{rep_format}/{format_effectif}_en-tete.adoc[]
+
+ifdef::glogus_doc[include::GLOGUS.adoc[]]
+
+include::{rep_format}/SOMMAIRE.adoc[]
+Ce document décrit un (gabarit de) mandat relatif à une prestation de service requise
+par {glogus_commanditaire} au {glogus_fournisseur} au bénéfice du {glogus_client}
+à l’usage des <<utilisateurs>>.
+Le projet consiste à…
+Les principaux résultats attendus sont…
+Les principaux risques pressentis sont…
+Le projet doit débuter (a débuté) le <<aaaa-mm-jj>>,
+doit se terminer (vers) le <<aaaa-mm-jj>> et
+devrait nécessiter <<effort>> heures-personnes (mois-personnes) <<indiquer la marge d’erreur>>.
+Son cout est évalué à <<cout>> <<indiquer la marge d’erreur>>.
+La qualité des livrables doit être telle que…
+
+ifdef::glogus_doc[]
+[TIP]
+====
+Le sommaire présente les éléments jugés essentiels à une décision basée sur
+le document (recommandations, engagements, etc.).
+Dans le cas d’un mandat, le sommaire devrait comprendre trois parties :
+une courte description du projet
+(elle sera utilisée pour faire l’annonce de votre présentation),
+la liste des résultats majeurs attendus,
+la liste des risques qui pourraient empêcher la réussite du mandat et,
+finalement, les autres paramètres de la cible du projet
+(date de début, date de fin, effort total requis en heure-personne, la qualité requise, etc.).
+Le mandat peut aussi être utilisé pour présenter une offre de service,
+voire être utilisé comme contrat, en ajustant le contenu de la section 6.
+Le présent modèle a été rédigé en prenant en compte,
+les lignes directrices de la norme ISO 9000-3,
+le modèle de développement CMM du SEI et
+les pratiques recommandées par le PMBoK
+en vigueur en 2012.
+====
+endif::glogus_doc[]
+
+include::{rep_format}/MISE_EN_GARDE.adoc[]
+// La mise en garde présente tout élément important en regard de la portée,
+// de l’interprétation, du statut, de l’applicabilité ou de la fiabilité du document.
+* Mandat portant sur un cas réel simplifié.
+* Plusieurs éléments critiques ne sont pas pris en compte.
+* Le produit résultant ne doit pas être utilisé en pratique.
+
+include::{rep_format}/APPROBATION.adoc[]
+////
+Selon l’état d’avancement des travaux, utiliser l’une ou l’autre des formulations suivantes.
+Si le document n’est pas sujet à approbation, supprimer la rubrique Approbation au complet.
+////
+La présente version du document n’est pas encore validée.
+Il s’agit d’un simple document de travail.
+La présente version du document a été validée et acceptée le <<aaaa-mm-jj>>.
+Elle entre en vigueur le <<aaaa-mm-jj>>.
+
+Le chargé de projet +
+[.underline]#                           # +
+<<Amélie Poulin>>
+
+Le responsable du contrôle de la qualité +
+[.underline]#                           # +
+<<Benoît Brisefer>>
+
+Le représentant autorisé du commanditaire +
+[.underline]#                           # +
+<<Jean-François de Maesmake>>
+include::{rep_format}/HISTO_debut.adoc[]
+
+| 2025-10-10
+| LL
+| Adaptation aux modèles CoFELI.
+
+| 2017-09-24
+| LL
+| Simplification et remise en page sur la base du modèle conjoint Μῆτις-GRIIS.
+
+| 2004-05-10
+| LL
+| Première esquisse.
+
+include::{rep_format}/HISTO_fin.adoc[]
+
+// Table des matières
+<<<
+toc::[]
+
+// Corps du document
+<<<
+== Description du mandat
+=== Objet et portée du document
+Le présent document a pour objet de décrire le mandat du projet confié
+par le {glogus_commanditaire} au {glogus_fournisseur} au bénéfice du {glogus_client}
+à l’usage des <<utilisateurs>>.
+
+Il s’adresse à toutes les parties prenantes au projet.
+
+=== Évolution du document
+.Version 1.0.0
+La première version du document a été établie sur les bases suivantes :
+
+* réunion exploratoire tenue le <<aaaa-mm-jj>> à laquelle ont participé <<A>>, <<B>>, <<C>> ;
+* base 2 ;
+* …
+* base n.
+
+Elle est entrée en vigueur le <<aaaa-mm-jj>>.
+
+.Version 2.0.0
+Une deuxième version du document a été rédigée suite à ....
+Cette version comporte les modifications majeures suivantes :
+
+* modif 1 ;
+* modif 2 ;
+* …
+* modif n.
+
+Elle est entrée en vigueur le <<aaaa-mm-jj>>.
+
+== Énoncé préliminaire de portée
+
+ifdef::glogus_doc[]
+[TIP]
+====
+Si l’ampleur de l’énoncé de portée le justifie, la présente section peut être
+réduite à un simple résumé et l’essentiel placé en annexe ou faire l’objet
+d’un document séparé.
+====
+endif::glogus_doc[]
+
+…
+
+=== Présentation
+ifdef::glogus_doc[]
+[TIP]
+====
+La présentation est normalement tirée d’un document produit par le client auquel
+elle fait référence.
+...
+====
+endif::glogus_doc[]
+
+==== Mise en contexte
+ifdef::glogus_doc[]
+[TIP]
+====
+Présentation des attentes et des besoins ayant présidé au lancement du projet.
+Au besoin, décrire les parties prenantes, le contexte d’affaires, etc.
+Description du projet lui-même, de ses objectifs et de son organisation générale.
+Ne pas déborder sur la caractérisation du produit (voir section suivante).
+====
+endif::glogus_doc[]
+
+Le projet {glogus_projet} vise à développer une solution originale au problème
+de <<sous-facturation du temps d’antenne des relais hertziens du réseau Trans_Uranie>>.
+Le projet a été proposé par la direction des ressources financières, qui agit
+comme commanditaire et client.
+Il est pris en charge par le service de développement de la direction de
+l’exploitation, qui agit comme fournisseur.
+La portée du projet est décrite de façon plus détaillée dans l’énoncé préliminaire
+de portée [EPP].
+<<(ou en annexe dans le cas où il s’agit d’un document de petite envergure présumé relativement stable)>>
+
+<<Références aux études préalables.>>
+
+L’étude des besoins [ETB_01] recommande que...
+
+L’étude de faisabilité [ETF_01] conclut que...
+
+L’étude d’opportunité [ETO_01] (ou le dossier commercial) établit que...
+
+<<Description du mandat spécifique au sein du projet.>>
+
+Le mandat confié à l’équipe de projet a pour objectifs de...
+
+==== Caractérisation du produit
+
+<<Quelles sont les caractéristiques du produit du projet ?
+Il s’agit normalement d’une courte synthèse des caractéristiques développées dans l’EPP.>>
+
+Les principales caractéristiques du produit (logiciel, module, site web…)
+à être développé dans le cadre du projet sont les suivantes :
+
+* le produit doit s’intégrer à l’actuel système de facturation ;
+* son développement doit pouvoir être amorti grâce aux revenus supplémentaires
+  engendrés sur une période d’exploitation de 18 mois ;
+* aucun nouveau composant matériel ne doit être nécessaire à son exploitation,
+  une reconfiguration des matériels existants peut toutefois être envisagée.
+
+…
+
+==== Justification
+
+<<Pourquoi le commanditaire entreprend-il ce projet ?
+Comment le projet s’insère-t-il dans le plan stratégique de l’organisation ?>>
+
+Le commanditaire a décidé d’entreprendre ce projet au <<aaaa-mm-jj>> en raison de :
+
+* r1 ;
+* r2 ;
+* rn.
+
+Pourquoi le fournisseur at-il été retenu pour réaliser projet ?
+Le fournisseur a été retenu le aaaa-mm-jj sur les bases suivantes :
+
+* r1 ;
+* r2 ;
+* rn.
+
+=== Inventaire préliminaire des livrables
+Les principaux livrables envisagés au démarrage du projet sont les suivants :
+
+.Inventaire préliminaire des livrables.
+[%autowidth]
+|===
+|Code | Livrable | Livraison | Format
+
+|MPS_01 | Mandat du projet | aaaa-mm-jj | A, P
+|PGP_01 | Plan préliminaire de gestion du projet, échéancier du mandat | aaaa-mm-jj | A, P
+|SES_01 | Spécification préliminaire des exigences du système          | aaaa-mm-jj | A
+|SAS_01 | Spécification préliminaire d’architecture du système         | aaaa-mm-jj | A
+|SXS_01 | Spécification préliminaire des essais du système             | aaaa-mm-jj | A
+|PGP_02 | Plan de gestion de projet et échéancier détaillé des travaux | aaaa-mm-jj | A, P
+|…      | …                                                            | aaaa-mm-jj | …
+|SCL_nn | Spécification de conception du logiciel de l’itération nn    | aaaa-mm-jj | …
+|SXL_nn | Spécification des essais de l’itération nn                   | aaaa-mm-jj | …
+|CSL_nn | Copie des sources du logiciel de l’itération nn              | aaaa-mm-jj | …
+|CEL_nn | Copie exécutable du logiciel de l’itération nn               | aaaa-mm-jj | …
+|REL_nn | Rapport d’essai de l’itération nn                            | aaaa-mm-jj | …
+|…      | …                                                            | aaaa-mm-jj | …
+|SES_02 | Spécification des exigences du système livré                 | aaaa-mm-jj | …
+|SAS_02 | Spécification d’architecture du système livré                | aaaa-mm-jj | …
+|SXS_02 | Spécification des essais du système livré                    | aaaa-mm-jj | …
+|CSS_01 | Copie des sources du système livré                           | aaaa-mm-jj | …
+|CES_01 | Copie exécutable du système livré                            | aaaa-mm-jj | …
+|RES_01 | Rapport d’essai du système livré                             | aaaa-mm-jj | …
+|GUI_01 | Guide de construction, d’installation et de configuration du système livré | aaaa-mm-jj | …
+|…      | …                                                            | aaaa-mm-jj | …
+|BFP_01 | Bilan de fin de projet                                       | aaaa-mm-jj | …
+|===
+
+Tous les livrables doivent être remis en fin de projet sous forme d’archive au format <<ZIP>>
+transmise par <<courriel>>.
+
+En outre, <<les documents livrables doivent être remis en deux exemplaires imprimés>>.
+
+Les formats prescrits pour chacun des livrables sont présentés au tableau suivant.
+
+.Inventaire préliminaire des livrables.
+[%autowidth]
+|===
+|Format | Description
+
+|A   | Document rédigé en français à l’aide du logiciel XXX de YYY (formats natif et PDF)
+|… | …
+|P   | Plan de projet présenté à l’aide du logiciel Project de Microsoft
+(format Project 2019)
+|===
+
+Les dates de livraisons sont celles indiquées,
+sauf indication contraire explicite à être établie dans le plan de projet approuvé (PGP_01).
+
+=== Hypothèses
+
+Inventaire des hypothèses qui ont été faites afin de permettre la rédaction du mandat.
+
+HY.01::
+Bonne disponibilité de l’infrastructure commune de développement.
+La disponibilité répond aux paramètres suivants (en jours ouvrables) :
+MTBF = 25 ; MTTR = 1.
+
+HY.02:: …
+HY.nn:: …
+
+=== Besoins
+Inventaire des besoins qui ont été fournis afin de permettre la rédaction du mandat.
+
+BE.01:: …
+BE.02:: …
+BE.nn:: …
+
+=== Contraintes
+
+Inventaire des contraintes qui ont été prises en compte dans la définition du mandat.
+
+CO.01:: …
+CO.02:: …
+CO.nn:: …
+
+=== Critères d’acceptation
+
+Inventaire des critères en fonction desquels le projet sera évalué puis accepté.
+
+CA.01:: …
+CA.02:: …
+CA.nn:: …
+
+== Tâches et échéancier
+ifdef::glogus_doc[]
+[TIP]
+====
+La présente section, au complet, peut être remplacée par une référence à
+un plan de travail indépendant.
+Un modèle de plan de travail est mis à disposition par le GLOGUS sous l’acronyme PDT.
+====
+
+…
+
+=== Programme
+ifdef::glogus_doc[]
+[TIP]
+====
+Normalement, la phase de démarrage devrait permettre de déterminer une portée préliminaire.
+À partir de cette portée préliminaire, certaines activités, nécessaires et importantes,
+s’imposeront (voir notamment la liste des activités proposées par le PMBoK).
+Il en est de même pour certains jalons.
+Ces activités et ces jalons doivent être consignés au tableau suivant.
+Le tableau est le plus souvent incomplet (car la portée n’est que préliminaire).
+Les prochaines étapes de la planification du projet sont là pour permettre de le compléter.
+
+_Note_ : +
+Le tableau est en quelque sorte une liste d’activités dont les parties
+contractantes conviennent d’avance qu’elles devront être réalisées.
+Il est le fruit de leur expertise commune. Le tableau doit comporter minimalement :
+
+* tous les jalons majeurs ;
+* toutes les activités produisant un livrable dont l’approbation détermine la poursuite du projet.
+
+_Rappel_ : +
+Par définition, un jalon induit un effort nul.
+
+La colonne « Lieu de réalisation » peut être supprimée si
+toutes les activités se déroulent dans un même lieu.
+La colonne « Responsable » départage les activités entre le commanditaire,
+le client et le fournisseur ou des sous-groupes au sein de ces intervenants.
+Dans ce cas, les sous-groupes devront être présentés à la section 4.
+
+La description d’un jalon doit comprendre la liste des livrables qui sont requis
+pour son évaluation.
+
+Lorsque la date de début des travaux est incertaine, la colonne « Date »
+peut être remplacée par une colonne « Délai » qui donne le délai entre
+le début du projet et le début de l’activité (en jours, en semaines ou en mois).
+====
+
+Le tableau suivant présente les principales activités et les principaux jalons
+prévus au programme.
+
+.Programme prévisionnel des activités et des jalons.
+[%autowidth]
+|===
+|     | Début      | Fin        | Description       | Effort (hp) | Responsable | Lieu de réalisation
+
+|J.01 | aaaa-mm-jj | aaaa-mm-jj | Début des travaux | 0           |             | S.O.
+|A.01 |            |            |                   | 12          |             |
+| …   |            |            |                   | 16          |             |
+|J.02 |            |            |                   | 0           |             | S.O.
+|A.xx |            |            |                   | 16          |             |
+|…    |            |            |                   | 48          |             |
+|J.03 |            |            |                   | 0           |             | S.O.
+|A.yy |            |            |                   | 32          |             |
+|…    |            |            |                   | 48          |             |
+|J.nn | aaaa-mm-jj | aaaa-mm-jj | Fin des travaux   | 0           |             | S.O.
+
+|     |            |            | TOTAL             | 172         |             |
+|===
+
+L’assurance et le contrôle de la qualité seront supervisés par <<le fournisseur ou le client>>.
+
+=== Évaluation
+
+Ce programme s’échelonne sur une durée de <<x>> (jours ouvrables, semaines, mois, années)
+et requiert un effort estimé à <<w>> (jours-personnes, mois-personnes, années-personnes).
+La répartition de l’effort est indiquée au tableau suivant.
+
+ifdef::glogus_doc[]
+[TIP]
+====
+Cette répartition peut être exprimée en termes de phases (comprises entre deux jalons)
+ou de livrables, au choix.
+Les catégories correspondant aux types de ressources (programmation, analyse, gestion, etc.),
+aux services impliqués (finance, développement, exploitation, etc.) ou
+à toute autre catégorisation significative par rapport à l’organisation du projet.
+====
+
+.Répartition des heures par entité (phase ou livrable) et par catégorie en heure-personne.
+[%autowidth]
+|===
+|Entité | Cat. 1 | Cat. 2 | Cat. 3 | Total
+
+|e1    | 12 | 24 |  6 | 42
+|e2    | 0  | 36 |  0 | 36
+|e3    | 0  | 10 | 10 | 20
+|e4    | 0  |  0 | 12 | 12
+|Total | 12 | 70 | 28 |110
+
+|===
+
+La version définitive des documents est produite <<y>> (jours ouvrables, semaines…)
+après la réception des commentaires du client ou, à défaut,
+au plus tard <<z>> (jours ouvrables, semaines…) après la livraison finale.
+
+L’évaluation de l’avancement du projet lors des rencontres de suivi et, plus particulièrement,
+celles correspondant aux jalons majeurs sera réalisée sur la base des éléments
+tangibles suivants (indiquer de quels livrables ils proviendront) :
+
+* et1 ;
+* et2 ;
+* etn.
+
+=== Activités de suivi requises
+
+Les activités de suivi prévues au cours du mandat sont les suivantes :
+
+* une réunion d’équipe hebdomadaire, le <<jour>> de <<heure de début (hh:mm)>>
+  à <<heure fin de (hh:mm)>> ;
+* un rapport d’avancement bimensuel remis au responsable contractuel et
+  au responsable fonctionnel (le 1er et le 15 du mois, ou le <<jour>>
+  aux deux semaines…) ;
+* une rencontre bimensuelle avec les responsables désignés par le commanditaire
+  et le client (deux jours ouvrables après la transmission du rapport d’avancement).
+
+=== Risques connus
+
+Inventaire des risques identifiés au moment du dépôt dur MPS.
+
+RI.01:: …
+RI.02:: …
+RI.nn:: …
+
+== Équipe de réalisation
+ifdef::glogus_doc[]
+[TIP]
+====
+Lorsque le projet est interne, il est souvent suffisant de remplir les tableaux
+de la présente section.
+====
+
+…
+
+=== Fournisseur
+ifdef::glogus_doc[]
+[TIP]
+====
+La description des ressources humaines fait appel minimalement à quatre informations :
+le poste au sein de l’équipe de projet, les fonctions associées au poste,
+le titulaire du poste et le mécanisme ou la personne qui peut agir en l’absence du titulaire.
+Le titulaire et sa relève sont définis soit comme un poste (au sein de l’organisation),
+soit comme une personne (dans ce cas, on en indique alors le nom),
+soit comme « à venir »
+(dans ce cas, la désignation peut être retardée jusqu’à l’activité d’allocation).
+
+En général, on a plutôt recours au poste au sein de l’organisation,
+le nom étant beaucoup plus contraignant.
+Cependant, la partie cliente peut vouloir exiger une personne en particulier.
+De même, un fournisseur peut vouloir « mousser » sa proposition
+par l’insertion d’une ressource bien cotée.
+Le plus souvent, seules les fonctions clés ont des titulaires nominatifs.
+====
+
+Les ressources humaines mises à disposition par le fournisseur sont les suivantes :
+
+.Inventaire des ressources humaines du fournisseur.
+[%autowidth]
+|===
+|Fonction ou poste | Titulaire | Relève
+
+| … | … | …
+| … | … | …
+
+|===
+
+ifdef::glogus_doc[]
+[TIP]
+====
+La référence à un glossaire commun peut remplacer les paragraphes qui suivent.
+====
+
+Les fonctions des ressources humaines du fournisseur sont décrites ci-après :
+
+responsable contractuel::
+personne habilitée à prendre des engagements de nature contractuelle
+au nom du fournisseur ;
+
+chargé de projet::
+personne responsable de la supervision des travaux, de l’analyse et de
+l’architecture du produit, elle peut aussi agir à titre de rédacteur technique ;
+
+analyste principal::
+personne responsable de l’analyse du domaine d’application et de
+la spécification des exigences ;
+
+concepteur logiciel::
+personne responsable de la conception et de la mise en œuvre
+de composants logiciels ;
+
+concepteur matériel::
+personne responsable de la conception de composants matériels ;
+
+technicien::
+personne réalisant les tâches d’installation et de configuration des équipements
+et des logiciels de la configuration ciblée ;
+
+rédacteur technique::
+personne responsable de la rédaction technique des documents ;
+
+traducteur::
+personne responsable de la traduction des documents.
+
+=== Client et commanditaire
+
+<<Voir commentaires en 4.1>>
+
+Les ressources humaines mises à disposition par le client sont les suivantes :
+
+.Inventaire des ressources humaines du client et du commanditaire.
+[%autowidth]
+|===
+|Fonction ou poste | Titulaire | Relève
+
+| … | … | …
+| … | … | …
+
+|===
+
+ifdef::glogus_doc[]
+[TIP]
+====
+La référence à un glossaire commun peut remplacer les paragraphes qui suivent.
+====
+
+Les fonctions des ressources humaines du client et du commanditaire sont décrites ci-après :
+
+responsable contractuel::
+personne habilitée à prendre des engagements de nature contractuelle
+au nom du commanditaire ;
+
+responsable fonctionnel::
+personne apte à répondre aux demandes d’information technique formulées par le
+fournisseur et habilitée à approuver au nom du client les documents techniques
+produits par le fournisseur
+(à la discrétion du client, cette personne peut être secondée dans son travail par un comité consultatif).
+
+Leur participation peut être évaluée ainsi :
+
+responsable fonctionnel::
+<<nn>> heures réparties sur la durée du contrat ;
+
+responsable contractuel::
+<<mm>> heures réparties sur la durée du contrat.
+
+La participation du responsable fonctionnel est essentielle à la réussite du mandat.
+Le plan de gestion de projet proposera donc une suite de consultations
+d’une durée limitée, cela tout en prenant en compte l’emploi du temps et
+les responsabilités de chacun.
+
+=== Responsabilités
+ifdef::glogus_doc[]
+[TIP]
+====
+Il s’agit ici d’établir, à l’aide d’un tableau de délégation de responsabilités,
+le rôle de chacune des ressources identifiées aux deux sections précédentes
+en regard de chacun des livrables, jalons et activités identifiées aux sections 2.1 et 3.2.
+
+_Rappel_ : +
+Un tableau de délégation détermine les rôles au sein d’un processus.
+
+Les systèmes de rôles les plus fréquents sont RACI et APRIS :
+
+* Système RACI
+  - autorise (et désigne)
+  - est responsable
+  - est consulté
+  - est informé
+
+* Système APRIS
+  - est imputable (accountable)
+  - participe (participant)
+  - doit revoir (review required)
+  - doit informer (input required)
+  - doit approuver (sign-off required)
+====
+
+…
+
+.Délégation des responsabilités par poste (ou fonction).
+[%autowidth]
+|===
+|     |Activité/Jalon/Livrables | PF 1 | PF 2  | …    | PF n
+
+|X.01 |                         |      |       |      |
+|X.02 |                         |      |       |      |
+| …   |                         |      |       |      |
+|X.kk |                         |      |       |      |
+
+|===
+
+== Organisation et logistique
+=== Délai de réponse à une demande d’information
+Le client répond dans un délai raisonnable à toute demande d’information
+concernant les processus, les infrastructures, les équipements et
+les outils en place (typiquement moins de <<x>> jours ouvrables).
+
+=== Délai de réponse à une demande d’approbation
+Le client répond dans un délai raisonnable à toute demande d’approbation
+de documents (typiquement moins de <<y>> jours ouvrables).
+
+=== Rapports d’avancement
+ifdef::glogus_doc[]
+[TIP]
+====
+Lorsque le projet est interne, il est souvent suffisant de renvoyer à
+la politique interne de l’organisation.
+====
+
+Le fournisseur communique au commanditaire un rapport d’avancement
+sur une base régulière <<périodicité (par exemple le mardi aux deux semaines)>>.
+
+Le rapport comprend notamment les informations suivantes :
+
+* sommaire ;
+* évènements marquants ;
+* état d’avancement des activités et des livrables ;
+* inventaire des actions préventives, correctrices et palliatives à venir ;
+* inventaire des activités à être lancées au cours de la prochaine période ;
+* inventaire des livrables à être terminés au cours de la prochaine période ;
+* inventaire des points de vigilance ;
+* échéancier révisé.
+
+Le rapport doit suivre le modèle présenté en annexe.
+
+=== Outils de réalisation
+Les outils nécessaires à la réalisation du présent mandat seront fournis par <<qui> et <<où>>.
+Le client assurera l’accès aux ressources requises pour l’évaluation des processus,
+des infrastructures, des équipements et des outils en place qui doivent être évalués
+dans le cadre du mandat.
+
+=== Calendrier des travaux
+Les travaux commenceront dans la semaine suivant la signature du contrat et
+s’échelonneront sur une durée à être déterminée lors de la préparation
+du plan de gestion de projet (voir Tableau 3),
+mais ladite période ne pouvant pas dépasser le <<aaaa-mm-jj>>.
+
+=== Lieux de réalisation
+Voir le programme (Tableau 3).
+
+== Budget et clauses particulières
+ifdef::glogus_doc[]
+[TIP]
+====
+Lorsque le projet est interne cette section est parfois omise.
+====
+
+…
+
+=== Couts de réalisation
+Les couts de réalisation sont déterminés sur une base horaire selon les taux indiqués au tableau suivant.
+
+.Taux horaire
+[%autowidth]
+|===
+|Fonction     | Taux (CAD/h)
+
+|Programmeur   | <<x>>
+|Infographiste | <<y>>
+|Analyste      | <<z>>
+|===
+
+La facturation, accompagnée des pièces justificatives, est faite toutes les deux semaines et payable à la réception.
+
+=== Frais afférents
+Les frais de déplacement du personnel du fournisseur dans un rayon de 50 km de
+ses bureaux montréalais sont facturables au fournisseur.
+Le temps de déplacement est facturable au client, aux taux applicables.
+Les autres dépenses, directement reliées à l’objet du contrat et implicitement nécessaires à son exécution, ou autorisées au préalable par écrit par le commanditaire à la demande écrite du fournisseur, ou imposées par la loi, sont remboursables par le client. Toutes les dépenses remboursables sont payées au fournisseur soit au cout réel sur présentation de factures acquittées, soit à un taux fixe qui a été stipulé au contrat ou approuvé au préalable par le client sur présentation de pièces justificatives, s’il y a lieu.
+
+=== Budget global
+Le projet s’inscrit dans les limites budgétaires globales suivantes :
+
+* couts de développement…
+* couts des infrastructures…
+* couts organisationnels…
+* couts liés aux risques…
+* couts financiers…
+* frais afférents…
+
+La répartition des couts est donnée au tableau suivant.
+
+.Répartition des couts par élément (phase, jalon, livrable, activité)
+[%autowidth]
+|===
+|Date       | Élément | Budget (CAD)
+
+|aaaa-mm-jj |        | 12 000
+|           |        |  2 300
+|           |        |  4 800
+|           |        | 23 000
+|           |        |  7 200
+|           |        |  4 300
+|           | Total  | 53 600
+
+|===
+
+
+=== Durée de validité
+ifdef::glogus_doc[]
+[TIP]
+====
+Inclure la présente sous-section si le mandat fait partie d’une proposition commerciale.
+====
+
+La présente offre est valable jusqu’au <<date_de_fin_de_validité>>.
+
+////
+<<<
+[glosssary]
+== Définitions
+////
+
+////
+<<<
+[references]
+== Références
+////
+
+include::{rep_format}/{format_effectif}_en-pied.adoc[]
+
+////
+         1         2         3         4         5         6         7         8         9
+123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890
+////

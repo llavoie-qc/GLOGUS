@@ -1,0 +1,23 @@
+.Les gabarits GLOGUS
+Le présent gabarit fait partie de l’ensemble des gabarits développés dans le cadre
+du projet GLOGUS du groupe de recherche Μῆτις.
+Le projet GLOGUS vise à proposer des méthodes, des techniques et des outils
+facilitant la conduite et la documentation des projets de développement logiciel.
+
+Dans chaque gabarit, le texte souligné de couleur bleu placé entre crochets dénote un commentaire,
+une indication ou une valeur visant à faciliter l’adaptation du gabarit dans
+le cadre d’une utilisation effective, par exemple
+<<les crochets doubles doivent donc normalement disparaitre dès lors qu’on transforme le gabarit en document applicable>>.
+
+[TIP]
+Les notes plus importantes (un ou plusieurs paragraphes) sont mises en évidence
+grâce au mécanisme d’annotation (_admonition_) d’AsciiDoc (comme celle-ci).
+
+Plusieurs variables (des attributs selon le vocabulaire d’AsciiDoc) permettent
+de contextualiser le gabarit, leur identifiant est préfixée par « glogus_ » et
+elles sont définies en tête du document.
+Finalement, l’environnement et les conventions générales d’utilisation d’AsciiDoc
+sont celles de CoLOED, voir https://github.com/CoLOED.
+Le projet GLOGUS lui-même est hébergé par le CoFELI, voir https://github.com/CoFELI.
+
+© 2004-2024 Luc Lavoie, Groupe Μῆτις, Faculté des sciences, Université de Sherbrooke
