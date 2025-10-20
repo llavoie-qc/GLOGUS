@@ -7,7 +7,7 @@ facilitant la conduite et la documentation des projets de développement logicie
 Dans chaque gabarit, le texte souligné de couleur bleu placé entre crochets dénote un commentaire,
 une indication ou une valeur visant à faciliter l’adaptation du gabarit dans
 le cadre d’une utilisation effective, par exemple
-<<les crochets doubles doivent donc normalement disparaitre dès lors qu’on transforme le gabarit en document applicable>>.
+<<les crochets doivent donc normalement disparaitre dès lors qu’on transforme le gabarit en document applicable>>.
 
 [TIP]
 Les notes plus importantes (un ou plusieurs paragraphes) sont mises en évidence

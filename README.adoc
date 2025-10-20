@@ -1,5 +1,5 @@
 == GLOGUS
-*Modèles de documents requis par la pratique du génie logiciel*
+*Modèles de documents utiles à la pratique du génie logiciel*
 
-Proposés par les membres du groupe Metis +
+Proposés par les membres du groupe Μῆτις (en référence à la mère de la déesse Ἀθηνᾶ) +
 Département d’informatique, Faculté des sciences, Université de Sherbrooke.

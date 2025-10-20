@@ -160,7 +160,7 @@ d’un document séparé.
 ====
 endif::glogus_doc[]
 
-…
+…o…
 
 === Présentation
 ifdef::glogus_doc[]
@@ -184,16 +184,22 @@ Ne pas déborder sur la caractérisation du produit (voir section suivante).
 endif::glogus_doc[]
 
 Le projet {glogus_projet} vise à développer une solution originale au problème
-de <<sous-facturation du temps d’antenne des relais hertziens du réseau Trans_Uranie>>.
+de <<description_sommaire_du_problème>>.
 Le projet a été proposé par la direction des ressources financières, qui agit
 comme commanditaire et client.
 Il est pris en charge par le service de développement de la direction de
 l’exploitation, qui agit comme fournisseur.
 La portée du projet est décrite de façon plus détaillée dans l’énoncé préliminaire
 de portée [EPP].
-<<(ou en annexe dans le cas où il s’agit d’un document de petite envergure présumé relativement stable)>>
 
-<<Références aux études préalables.>>
+ifdef::glogus_doc[]
+[TIP]
+====
+L’EPP peut être placé en annexe du MPS s’il s’agit d’un document de petite
+envergure présumé relativement stable.
+====
+
+<<Références_aux_études_préalables.>>
 
 L’étude des besoins [ETB_01] recommande que...
 
@@ -201,7 +207,7 @@ L’étude de faisabilité [ETF_01] conclut que...
 
 L’étude d’opportunité [ETO_01] (ou le dossier commercial) établit que...
 
-<<Description du mandat spécifique au sein du projet.>>
+<<Description_du_mandat_spécifique_au_sein_du_projet.>>
 
 Le mandat confié à l’équipe de projet a pour objectifs de...
 
@@ -219,7 +225,7 @@ Les principales caractéristiques du produit (logiciel, module, site web…)
 * aucun nouveau composant matériel ne doit être nécessaire à son exploitation,
   une reconfiguration des matériels existants peut toutefois être envisagée.
 
-…
+…o…
 
 ==== Justification
 
@@ -243,7 +249,7 @@ Le fournisseur a été retenu le aaaa-mm-jj sur les bases suivantes :
 Les principaux livrables envisagés au démarrage du projet sont les suivants :
 
 .Inventaire préliminaire des livrables.
-[%autowidth]
+[%autowidth%unbreakable,role=center]
 |===
 |Code | Livrable | Livraison | Format
 
@@ -274,19 +280,16 @@ Les principaux livrables envisagés au démarrage du projet sont les suivants 
 Tous les livrables doivent être remis en fin de projet sous forme d’archive au format <<ZIP>>
 transmise par <<courriel>>.
 
-En outre, <<les documents livrables doivent être remis en deux exemplaires imprimés>>.
-
 Les formats prescrits pour chacun des livrables sont présentés au tableau suivant.
 
 .Inventaire préliminaire des livrables.
-[%autowidth]
+[%autowidth%unbreakable,role=center]
 |===
 |Format | Description
 
-|A   | Document rédigé en français à l’aide du logiciel XXX de YYY (formats natif et PDF)
+|A   | Document rédigé en français à l’aide du logiciel <<XXX>> de <<YYY>> (formats <<DDD>> et PDF).
 |… | …
-|P   | Plan de projet présenté à l’aide du logiciel Project de Microsoft
-(format Project 2019)
+|P   | Plan de projet présenté à l’aide du logiciel <<PPP>> de <<TTT>> (formats <<EEE>> et PDF).
 |===
 
 Les dates de livraisons sont celles indiquées,
@@ -336,7 +339,7 @@ un plan de travail indépendant.
 Un modèle de plan de travail est mis à disposition par le GLOGUS sous l’acronyme PDT.
 ====
 
-…
+…o…
 
 === Programme
 ifdef::glogus_doc[]
@@ -379,7 +382,7 @@ Le tableau suivant présente les principales activités et les principaux jalons
 prévus au programme.
 
 .Programme prévisionnel des activités et des jalons.
-[%autowidth]
+[%autowidth%unbreakable,role=center]
 |===
 |     | Début      | Fin        | Description       | Effort (hp) | Responsable | Lieu de réalisation
 
@@ -416,7 +419,7 @@ aux services impliqués (finance, développement, exploitation, etc.) ou
 ====
 
 .Répartition des heures par entité (phase ou livrable) et par catégorie en heure-personne.
-[%autowidth]
+[%autowidth%unbreakable,role=center]
 |===
 |Entité | Cat. 1 | Cat. 2 | Cat. 3 | Total
 
@@ -445,7 +448,7 @@ tangibles suivants (indiquer de quels livrables ils proviendront) :
 Les activités de suivi prévues au cours du mandat sont les suivantes :
 
 * une réunion d’équipe hebdomadaire, le <<jour>> de <<heure de début (hh:mm)>>
-  à <<heure fin de (hh:mm)>> ;
+  à <<heure de fin (hh:mm)>> ;
 * un rapport d’avancement bimensuel remis au responsable contractuel et
   au responsable fonctionnel (le 1er et le 15 du mois, ou le <<jour>>
   aux deux semaines…) ;
@@ -468,7 +471,7 @@ Lorsque le projet est interne, il est souvent suffisant de remplir les tableaux
 de la présente section.
 ====
 
-…
+…o…
 
 === Fournisseur
 ifdef::glogus_doc[]
@@ -493,7 +496,7 @@ Le plus souvent, seules les fonctions clés ont des titulaires nominatifs.
 Les ressources humaines mises à disposition par le fournisseur sont les suivantes :
 
 .Inventaire des ressources humaines du fournisseur.
-[%autowidth]
+[%autowidth%unbreakable,role=center]
 |===
 |Fonction ou poste | Titulaire | Relève
 
@@ -546,7 +549,7 @@ personne responsable de la traduction des documents.
 Les ressources humaines mises à disposition par le client sont les suivantes :
 
 .Inventaire des ressources humaines du client et du commanditaire.
-[%autowidth]
+[%autowidth%unbreakable,role=center]
 |===
 |Fonction ou poste | Titulaire | Relève
 
@@ -613,10 +616,10 @@ Les systèmes de rôles les plus fréquents sont RACI et APRIS :
   - doit approuver (sign-off required)
 ====
 
-…
+…o…
 
 .Délégation des responsabilités par poste (ou fonction).
-[%autowidth]
+[%autowidth%unbreakable,role=center]
 |===
 |     |Activité/Jalon/Livrables | PF 1 | PF 2  | …    | PF n
 
@@ -631,11 +634,11 @@ Les systèmes de rôles les plus fréquents sont RACI et APRIS :
 === Délai de réponse à une demande d’information
 Le client répond dans un délai raisonnable à toute demande d’information
 concernant les processus, les infrastructures, les équipements et
-les outils en place (typiquement moins de <<x>> jours ouvrables).
+les outils en place (typiquement moins de <<xxx>> jours ouvrables).
 
 === Délai de réponse à une demande d’approbation
 Le client répond dans un délai raisonnable à toute demande d’approbation
-de documents (typiquement moins de <<y>> jours ouvrables).
+de documents (typiquement moins de <<yyy>> jours ouvrables).
 
 === Rapports d’avancement
 ifdef::glogus_doc[]
@@ -646,7 +649,7 @@ la politique interne de l’organisation.
 ====
 
 Le fournisseur communique au commanditaire un rapport d’avancement
-sur une base régulière <<périodicité (par exemple le mardi aux deux semaines)>>.
+aux <<sss>> semaines, le <<jjj>>.
 
 Le rapport comprend notamment les informations suivantes :
 
@@ -683,19 +686,19 @@ ifdef::glogus_doc[]
 Lorsque le projet est interne cette section est parfois omise.
 ====
 
-…
+…o…
 
 === Couts de réalisation
 Les couts de réalisation sont déterminés sur une base horaire selon les taux indiqués au tableau suivant.
 
 .Taux horaire
-[%autowidth]
+[%autowidth%unbreakable,role=center]
 |===
 |Fonction     | Taux (CAD/h)
 
-|Programmeur   | <<x>>
-|Infographiste | <<y>>
-|Analyste      | <<z>>
+|Programmeur   | <<ppp>>
+|Infographiste | <<iii>>
+|Analyste      | <<aaa>>
 |===
 
 La facturation, accompagnée des pièces justificatives, est faite toutes les deux semaines et payable à la réception.
@@ -718,8 +721,9 @@ Le projet s’inscrit dans les limites budgétaires globales suivantes :
 
 La répartition des couts est donnée au tableau suivant.
 
+[role=center]
 .Répartition des couts par élément (phase, jalon, livrable, activité)
-[%autowidth]
+[%autowidth%unbreakable,role=center]
 |===
 |Date       | Élément | Budget (CAD)
 
