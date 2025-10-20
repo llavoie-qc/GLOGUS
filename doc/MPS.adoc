@@ -5,22 +5,22 @@
 :depot: GLOGUS
 :!branche:
 :glogus_doc:
-:glogus_client: <<Client>>
-:glogus_commanditaire: <<Commanditaire>>
-:glogus_fournisseur: <<Fournisseur>>
-:glogus_produit: <<Produit>>
-:glogus_projet: <<Projet>>
+:glogus_client: pass:q[[Anno]#[glogus_client]#]
+:glogus_commanditaire: pass:q[[Anno]#[glogus_commanditaire]#]
+:glogus_fournisseur: pass:q[[Anno]#[glogus_fournisseur]#]
+:glogus_produit: pass:q[[Anno]#[glogus_produit]#]
+:glogus_projet: pass:q[[Anno]#[glogus_projet]#]
 :!glogus_phase:
-:glogus_mandat: <<01>>
+:glogus_mandat: pass:q[[Anno]#[glogus_mandat]#]
 :sigle: {organisation}:{glogus_produit}_{glogus_projet}
 ifdef::glogus_phase[:sigle: {sigle}_{glogus_phase}]
 :sigle: {sigle}_MPS
 ifdef::glogus_mandat[:sigle: {sigle}-{glogus_mandat}]
-:titre: <<Titre du Projet>>
-:sous_titre: <<Titre du Mandat>>
+:titre: pass:q[[Anno]#[titre (titre du projet)]#]
+:sous_titre: pass:q[[Anno]#[sous_titre (titre du mandat)]#]
 :keywords: mandat de prestation de service
-:revnumber: 150a
-:revdate: 2025-10-10
+:revnumber: 150b
+:revdate: 2025-10-18
 :version-label: version applicable
 :author: Luc LAVOIE
 :email: luc.lavoie@usherbrooke.ca
@@ -32,19 +32,24 @@ include::../../../rep_CoLOED_AsciiDoc.adoc[]
 ifndef::format_effectif[:format_effectif: RAPPORT]
 include::{rep_format}/{format_effectif}_en-tete.adoc[]
 
-ifdef::glogus_doc[include::GLOGUS.adoc[]]
+ifdef::glogus_doc[]
+<<<
+include::GLOGUS.adoc[]
+
+<<<
+endif::glogus_doc[]
 
 include::{rep_format}/SOMMAIRE.adoc[]
 Ce document décrit un (gabarit de) mandat relatif à une prestation de service requise
 par {glogus_commanditaire} au {glogus_fournisseur} au bénéfice du {glogus_client}
-à l’usage des <<utilisateurs>>.
+à l’usage des [Anno]#<utilisateurs>#.
 Le projet consiste à…
 Les principaux résultats attendus sont…
 Les principaux risques pressentis sont…
-Le projet doit débuter (a débuté) le <<aaaa-mm-jj>>,
-doit se terminer (vers) le <<aaaa-mm-jj>> et
-devrait nécessiter <<effort>> heures-personnes (mois-personnes) <<indiquer la marge d’erreur>>.
-Son cout est évalué à <<cout>> <<indiquer la marge d’erreur>>.
+Le projet doit débuter (a débuté) le [Anno]#<aaaa-mm-jj>#,
+doit se terminer (vers) le [Anno]#<aaaa-mm-jj># et
+devrait nécessiter [Anno]#<effort># heures-personnes (mois-personnes) [Anno]#<indiquer la marge d’erreur>#.
+Son cout est évalué à [Anno]#<cout># [Anno]#<indiquer la marge d’erreur>#.
 La qualité des livrables doit être telle que…
 
 ifdef::glogus_doc[]
@@ -61,9 +66,9 @@ finalement, les autres paramètres de la cible du projet
 (date de début, date de fin, effort total requis en heure-personne, la qualité requise, etc.).
 Le mandat peut aussi être utilisé pour présenter une offre de service,
 voire être utilisé comme contrat, en ajustant le contenu de la section 6.
-Le présent modèle a été rédigé en prenant en compte,
+Le présent gabarit a été rédigé en prenant en compte,
 les lignes directrices de la norme ISO 9000-3,
-le modèle de développement CMM du SEI et
+le gabarit de développement CMM du SEI et
 les pratiques recommandées par le PMBoK
 en vigueur en 2012.
 ====
@@ -76,6 +81,8 @@ include::{rep_format}/MISE_EN_GARDE.adoc[]
 * Plusieurs éléments critiques ne sont pas pris en compte.
 * Le produit résultant ne doit pas être utilisé en pratique.
 
+// Approbation
+
 include::{rep_format}/APPROBATION.adoc[]
 ////
 Selon l’état d’avancement des travaux, utiliser l’une ou l’autre des formulations suivantes.
@@ -83,35 +90,45 @@ Si le document n’est pas sujet à approbation, supprimer la rubrique Approbati
 ////
 La présente version du document n’est pas encore validée.
 Il s’agit d’un simple document de travail.
-La présente version du document a été validée et acceptée le <<aaaa-mm-jj>>.
-Elle entre en vigueur le <<aaaa-mm-jj>>.
+////
+La présente version du document a été validée et acceptée le [Anno]#<aaaa-mm-jj>#.
+Elle entre en vigueur le [Anno]#<aaaa-mm-jj>#.
+////
 
-Le chargé de projet +
-[.underline]#                           # +
-<<Amélie Poulin>>
+[%unbreakable,cols=3,frame=none,grid=none]
+|===
 
-Le responsable du contrôle de la qualité +
+|Chargé de projet +
 [.underline]#                           # +
-<<Benoît Brisefer>>
+[Anno]#<Amélie Poulin>#
 
-Le représentant autorisé du commanditaire +
+|Responsable du contrôle de qualité +
 [.underline]#                           # +
-<<Jean-François de Maesmake>>
+[Anno]#<Benoît Brisefer>#
+
+|Mandataire autorisé du commanditaire +
+[.underline]#                           # +
+[Anno]#<Aimé de Mesmaeker>#
+|===
+
+// Historique des révisions
+
 include::{rep_format}/HISTO_debut.adoc[]
 
 | 2025-10-10
 | LL
-| Adaptation aux modèles CoFELI.
+| Adaptation aux gabarits CoFELI.
 
 | 2017-09-24
 | LL
-| Simplification et remise en page sur la base du modèle conjoint Μῆτις-GRIIS.
+| Simplification et remise en page sur la base du gabarit conjoint Μῆτις-GRIIS.
 
 | 2004-05-10
 | LL
 | Première esquisse.
 
 include::{rep_format}/HISTO_fin.adoc[]
+
 
 // Table des matières
 <<<
@@ -123,7 +140,7 @@ toc::[]
 === Objet et portée du document
 Le présent document a pour objet de décrire le mandat du projet confié
 par le {glogus_commanditaire} au {glogus_fournisseur} au bénéfice du {glogus_client}
-à l’usage des <<utilisateurs>>.
+à l’usage des [Anno]#<utilisateurs>#.
 
 Il s’adresse à toutes les parties prenantes au projet.
 
@@ -131,12 +148,12 @@ Il s’adresse à toutes les parties prenantes au projet.
 .Version 1.0.0
 La première version du document a été établie sur les bases suivantes :
 
-* réunion exploratoire tenue le <<aaaa-mm-jj>> à laquelle ont participé <<A>>, <<B>>, <<C>> ;
+* réunion exploratoire tenue le [Anno]#<aaaa-mm-jj># à laquelle ont participé [Anno]#<A>#, [Anno]#<B>#, [Anno]#<C># ;
 * base 2 ;
 * …
 * base n.
 
-Elle est entrée en vigueur le <<aaaa-mm-jj>>.
+Elle est entrée en vigueur le [Anno]#<aaaa-mm-jj>#.
 
 .Version 2.0.0
 Une deuxième version du document a été rédigée suite à ....
@@ -147,7 +164,7 @@ Cette version comporte les modifications majeures suivantes :
 * …
 * modif n.
 
-Elle est entrée en vigueur le <<aaaa-mm-jj>>.
+Elle est entrée en vigueur le [Anno]#<aaaa-mm-jj>#.
 
 == Énoncé préliminaire de portée
 
@@ -184,7 +201,7 @@ Ne pas déborder sur la caractérisation du produit (voir section suivante).
 endif::glogus_doc[]
 
 Le projet {glogus_projet} vise à développer une solution originale au problème
-de <<description_sommaire_du_problème>>.
+de [Anno]#<description_sommaire_du_problème>#.
 Le projet a été proposé par la direction des ressources financières, qui agit
 comme commanditaire et client.
 Il est pris en charge par le service de développement de la direction de
@@ -199,7 +216,7 @@ L’EPP peut être placé en annexe du MPS s’il s’agit d’un document de pe
 envergure présumé relativement stable.
 ====
 
-<<Références_aux_études_préalables.>>
+[Anno]#<Références_aux_études_préalables.>#
 
 L’étude des besoins [ETB_01] recommande que...
 
@@ -207,14 +224,14 @@ L’étude de faisabilité [ETF_01] conclut que...
 
 L’étude d’opportunité [ETO_01] (ou le dossier commercial) établit que...
 
-<<Description_du_mandat_spécifique_au_sein_du_projet.>>
+[Anno]#<Description_du_mandat_spécifique_au_sein_du_projet.>#
 
 Le mandat confié à l’équipe de projet a pour objectifs de...
 
 ==== Caractérisation du produit
 
-<<Quelles sont les caractéristiques du produit du projet ?
-Il s’agit normalement d’une courte synthèse des caractéristiques développées dans l’EPP.>>
+[Anno]#<Quelles sont les caractéristiques du produit du projet ?
+Il s’agit normalement d’une courte synthèse des caractéristiques développées dans l’EPP.>#
 
 Les principales caractéristiques du produit (logiciel, module, site web…)
 à être développé dans le cadre du projet sont les suivantes :
@@ -229,10 +246,10 @@ Les principales caractéristiques du produit (logiciel, module, site web…)
 
 ==== Justification
 
-<<Pourquoi le commanditaire entreprend-il ce projet ?
-Comment le projet s’insère-t-il dans le plan stratégique de l’organisation ?>>
+[Anno]#<Pourquoi le commanditaire entreprend-il ce projet ?
+Comment le projet s’insère-t-il dans le plan stratégique de l’organisation ?>#
 
-Le commanditaire a décidé d’entreprendre ce projet au <<aaaa-mm-jj>> en raison de :
+Le commanditaire a décidé d’entreprendre ce projet au [Anno]#<aaaa-mm-jj># en raison de :
 
 * r1 ;
 * r2 ;
@@ -249,7 +266,7 @@ Le fournisseur a été retenu le aaaa-mm-jj sur les bases suivantes :
 Les principaux livrables envisagés au démarrage du projet sont les suivants :
 
 .Inventaire préliminaire des livrables.
-[%autowidth%unbreakable,role=center]
+[%unbreakable%autowidth%header]
 |===
 |Code | Livrable | Livraison | Format
 
@@ -277,19 +294,19 @@ Les principaux livrables envisagés au démarrage du projet sont les suivants 
 |BFP_01 | Bilan de fin de projet                                       | aaaa-mm-jj | …
 |===
 
-Tous les livrables doivent être remis en fin de projet sous forme d’archive au format <<ZIP>>
-transmise par <<courriel>>.
+Tous les livrables doivent être remis en fin de projet sous forme d’archive au format [Anno]#<ZIP>#
+transmise par [Anno]#<courriel>#.
 
 Les formats prescrits pour chacun des livrables sont présentés au tableau suivant.
 
 .Inventaire préliminaire des livrables.
-[%autowidth%unbreakable,role=center]
+[%unbreakable%autowidth%header]
 |===
 |Format | Description
 
-|A   | Document rédigé en français à l’aide du logiciel <<XXX>> de <<YYY>> (formats <<DDD>> et PDF).
+|A   | Document rédigé en français à l’aide du logiciel [Anno]#<XXX># de [Anno]#<YYY># (formats [Anno]#<DDD># et PDF).
 |… | …
-|P   | Plan de projet présenté à l’aide du logiciel <<PPP>> de <<TTT>> (formats <<EEE>> et PDF).
+|P   | Plan de projet présenté à l’aide du logiciel [Anno]#<PPP># de [Anno]#<TTT># (formats [Anno]#<EEE># et PDF).
 |===
 
 Les dates de livraisons sont celles indiquées,
@@ -336,7 +353,7 @@ ifdef::glogus_doc[]
 ====
 La présente section, au complet, peut être remplacée par une référence à
 un plan de travail indépendant.
-Un modèle de plan de travail est mis à disposition par le GLOGUS sous l’acronyme PDT.
+Un gabarit de plan de travail est mis à disposition par le GLOGUS sous l’acronyme PDT.
 ====
 
 …o…
@@ -382,7 +399,8 @@ Le tableau suivant présente les principales activités et les principaux jalons
 prévus au programme.
 
 .Programme prévisionnel des activités et des jalons.
-[%autowidth%unbreakable,role=center]
+[%unbreakable%autowidth%header%footer]
+[cols=",,,,>,,"]
 |===
 |     | Début      | Fin        | Description       | Effort (hp) | Responsable | Lieu de réalisation
 
@@ -400,12 +418,12 @@ prévus au programme.
 |     |            |            | TOTAL             | 172         |             |
 |===
 
-L’assurance et le contrôle de la qualité seront supervisés par <<le fournisseur ou le client>>.
+L’assurance et le contrôle de la qualité seront supervisés par [Anno]#<le fournisseur ou le client>#.
 
 === Évaluation
 
-Ce programme s’échelonne sur une durée de <<x>> (jours ouvrables, semaines, mois, années)
-et requiert un effort estimé à <<w>> (jours-personnes, mois-personnes, années-personnes).
+Ce programme s’échelonne sur une durée de [Anno]#<xxx># (jours ouvrables, semaines, mois, années)
+et requiert un effort estimé à [Anno]#<www># (jours-personnes, mois-personnes, années-personnes).
 La répartition de l’effort est indiquée au tableau suivant.
 
 ifdef::glogus_doc[]
@@ -419,7 +437,8 @@ aux services impliqués (finance, développement, exploitation, etc.) ou
 ====
 
 .Répartition des heures par entité (phase ou livrable) et par catégorie en heure-personne.
-[%autowidth%unbreakable,role=center]
+[%unbreakable%autowidth%header%footer]
+[cols=",>,>,>,>"]
 |===
 |Entité | Cat. 1 | Cat. 2 | Cat. 3 | Total
 
@@ -431,9 +450,9 @@ aux services impliqués (finance, développement, exploitation, etc.) ou
 
 |===
 
-La version définitive des documents est produite <<y>> (jours ouvrables, semaines…)
+La version définitive des documents est produite [Anno]#<yyy># (jours ouvrables, semaines…)
 après la réception des commentaires du client ou, à défaut,
-au plus tard <<z>> (jours ouvrables, semaines…) après la livraison finale.
+au plus tard [Anno]#<zzz># (jours ouvrables, semaines…) après la livraison finale.
 
 L’évaluation de l’avancement du projet lors des rencontres de suivi et, plus particulièrement,
 celles correspondant aux jalons majeurs sera réalisée sur la base des éléments
@@ -447,10 +466,10 @@ tangibles suivants (indiquer de quels livrables ils proviendront) :
 
 Les activités de suivi prévues au cours du mandat sont les suivantes :
 
-* une réunion d’équipe hebdomadaire, le <<jour>> de <<heure de début (hh:mm)>>
-  à <<heure de fin (hh:mm)>> ;
+* une réunion d’équipe hebdomadaire, le [Anno]#<jour># de [Anno]#<heure de début (hh:mm)>#
+  à [Anno]#<heure de fin (hh:mm)># ;
 * un rapport d’avancement bimensuel remis au responsable contractuel et
-  au responsable fonctionnel (le 1er et le 15 du mois, ou le <<jour>>
+  au responsable fonctionnel (le 1er et le 15 du mois, ou le [Anno]#<jour>#
   aux deux semaines…) ;
 * une rencontre bimensuelle avec les responsables désignés par le commanditaire
   et le client (deux jours ouvrables après la transmission du rapport d’avancement).
@@ -496,7 +515,7 @@ Le plus souvent, seules les fonctions clés ont des titulaires nominatifs.
 Les ressources humaines mises à disposition par le fournisseur sont les suivantes :
 
 .Inventaire des ressources humaines du fournisseur.
-[%autowidth%unbreakable,role=center]
+[%unbreakable%autowidth%header]
 |===
 |Fonction ou poste | Titulaire | Relève
 
@@ -544,12 +563,12 @@ personne responsable de la traduction des documents.
 
 === Client et commanditaire
 
-<<Voir commentaires en 4.1>>
+[Anno]#<Voir commentaires en 4.1>#
 
 Les ressources humaines mises à disposition par le client sont les suivantes :
 
 .Inventaire des ressources humaines du client et du commanditaire.
-[%autowidth%unbreakable,role=center]
+[%unbreakable%autowidth%header]
 |===
 |Fonction ou poste | Titulaire | Relève
 
@@ -578,11 +597,11 @@ produits par le fournisseur
 
 Leur participation peut être évaluée ainsi :
 
-responsable fonctionnel::
-<<nn>> heures réparties sur la durée du contrat ;
-
 responsable contractuel::
-<<mm>> heures réparties sur la durée du contrat.
+[Anno]#<mm># heures réparties sur la durée du contrat.
+
+responsable fonctionnel::
+[Anno]#<nn># heures réparties sur la durée du contrat ;
 
 La participation du responsable fonctionnel est essentielle à la réussite du mandat.
 Le plan de gestion de projet proposera donc une suite de consultations
@@ -619,7 +638,7 @@ Les systèmes de rôles les plus fréquents sont RACI et APRIS :
 …o…
 
 .Délégation des responsabilités par poste (ou fonction).
-[%autowidth%unbreakable,role=center]
+[%unbreakable%autowidth%header]
 |===
 |     |Activité/Jalon/Livrables | PF 1 | PF 2  | …    | PF n
 
@@ -634,11 +653,11 @@ Les systèmes de rôles les plus fréquents sont RACI et APRIS :
 === Délai de réponse à une demande d’information
 Le client répond dans un délai raisonnable à toute demande d’information
 concernant les processus, les infrastructures, les équipements et
-les outils en place (typiquement moins de <<xxx>> jours ouvrables).
+les outils en place (typiquement moins de [Anno]#<xxx># jours ouvrables).
 
 === Délai de réponse à une demande d’approbation
 Le client répond dans un délai raisonnable à toute demande d’approbation
-de documents (typiquement moins de <<yyy>> jours ouvrables).
+de documents (typiquement moins de [Anno]#<yyy># jours ouvrables).
 
 === Rapports d’avancement
 ifdef::glogus_doc[]
@@ -649,7 +668,7 @@ la politique interne de l’organisation.
 ====
 
 Le fournisseur communique au commanditaire un rapport d’avancement
-aux <<sss>> semaines, le <<jjj>>.
+aux [Anno]#<sss># semaines, le [Anno]#<jjj>#.
 
 Le rapport comprend notamment les informations suivantes :
 
@@ -662,10 +681,11 @@ Le rapport comprend notamment les informations suivantes :
 * inventaire des points de vigilance ;
 * échéancier révisé.
 
-Le rapport doit suivre le modèle présenté en annexe.
+Le rapport doit suivre le gabarit présenté en annexe.
 
 === Outils de réalisation
-Les outils nécessaires à la réalisation du présent mandat seront fournis par <<qui> et <<où>>.
+Les outils nécessaires à la réalisation du présent mandat seront fournis par
+[Anno]#<qui># et [Anno]#<où>#.
 Le client assurera l’accès aux ressources requises pour l’évaluation des processus,
 des infrastructures, des équipements et des outils en place qui doivent être évalués
 dans le cadre du mandat.
@@ -674,7 +694,7 @@ dans le cadre du mandat.
 Les travaux commenceront dans la semaine suivant la signature du contrat et
 s’échelonneront sur une durée à être déterminée lors de la préparation
 du plan de gestion de projet (voir Tableau 3),
-mais ladite période ne pouvant pas dépasser le <<aaaa-mm-jj>>.
+mais ladite période ne pouvant pas dépasser le [Anno]#<aaaa-mm-jj>#.
 
 === Lieux de réalisation
 Voir le programme (Tableau 3).
@@ -692,13 +712,13 @@ Lorsque le projet est interne cette section est parfois omise.
 Les couts de réalisation sont déterminés sur une base horaire selon les taux indiqués au tableau suivant.
 
 .Taux horaire
-[%autowidth%unbreakable,role=center]
+[%unbreakable%autowidth%header]
 |===
 |Fonction     | Taux (CAD/h)
 
-|Programmeur   | <<ppp>>
-|Infographiste | <<iii>>
-|Analyste      | <<aaa>>
+|Programmeur   | [Anno]#<ppp>#
+|Infographiste | [Anno]#<iii>#
+|Analyste      | [Anno]#<aaa>#
 |===
 
 La facturation, accompagnée des pièces justificatives, est faite toutes les deux semaines et payable à la réception.
@@ -721,9 +741,9 @@ Le projet s’inscrit dans les limites budgétaires globales suivantes :
 
 La répartition des couts est donnée au tableau suivant.
 
-[role=center]
 .Répartition des couts par élément (phase, jalon, livrable, activité)
-[%autowidth%unbreakable,role=center]
+[%unbreakable%autowidth%header%footer]
+[cols=",,>"]
 |===
 |Date       | Élément | Budget (CAD)
 
@@ -745,7 +765,7 @@ ifdef::glogus_doc[]
 Inclure la présente sous-section si le mandat fait partie d’une proposition commerciale.
 ====
 
-La présente offre est valable jusqu’au <<date_de_fin_de_validité>>.
+La présente offre est valable jusqu’au [Anno]#<date_de_fin_de_validité>#.
 
 ////
 <<<

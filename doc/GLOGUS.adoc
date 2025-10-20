@@ -4,20 +4,27 @@ du projet GLOGUS du groupe de recherche Μῆτις.
 Le projet GLOGUS vise à proposer des méthodes, des techniques et des outils
 facilitant la conduite et la documentation des projets de développement logiciel.
 
-Dans chaque gabarit, le texte souligné de couleur bleu placé entre crochets dénote un commentaire,
-une indication ou une valeur visant à faciliter l’adaptation du gabarit dans
-le cadre d’une utilisation effective, par exemple
-<<les crochets doivent donc normalement disparaitre dès lors qu’on transforme le gabarit en document applicable>>.
+Dans chaque gabarit, le texte mis en forme à selon le style (_role_) *Anno*
+représente une annotation ou une valeur visant à faciliter l’adaptation du gabarit dans
+le cadre d’une utilisation effective, par exemple [Anno]#<annotation typique>#.
 
 [TIP]
-Les notes plus importantes (un ou plusieurs paragraphes) sont mises en évidence
-grâce au mécanisme d’annotation (_admonition_) d’AsciiDoc (comme celle-ci).
+Les annotations plus importantes (un ou plusieurs paragraphes) sont toutefois
+mises en évidence grâce au mécanisme d’annotation (_admonition_) d’AsciiDoc
+(comme la présente annotation).
 
-Plusieurs variables (des attributs selon le vocabulaire d’AsciiDoc) permettent
-de contextualiser le gabarit, leur identifiant est préfixée par « glogus_ » et
-elles sont définies en tête du document.
-Finalement, l’environnement et les conventions générales d’utilisation d’AsciiDoc
-sont celles de CoLOED, voir https://github.com/CoLOED.
-Le projet GLOGUS lui-même est hébergé par le CoFELI, voir https://github.com/CoFELI.
+Normalement, toutes ces annotations doivent être remplacées, retirées ou
+mises en commentaires lorsqu’un gabarit est transformé en document applicable.
 
-© 2004-2024 Luc Lavoie, Groupe Μῆτις, Faculté des sciences, Université de Sherbrooke
+Plusieurs variables (_attributes_) permettent
+de contextualiser le gabarit.
+Les identifiants des variables spécifiques aux gabarits du GLOGUS sont préfixés
+par « glogus_ » et elles sont prédéfinies en tête du document.
+Leur valeur implicite temporaire est composée de l’identifiant
+(éventuellement suivi d’un commentaire entre parenthèses)
+mis en forme dans le style *Anno*.
+
+Finalement, les conventions générales d’utilisation d’AsciiDoc sont celles de CoLOED,
+voir https://github.com/CoLOED.
+Le projet GLOGUS lui-même est hébergé par le CoFELI,
+voir https://github.com/CoFELI/GLOGUS.
